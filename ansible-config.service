@@ -1,0 +1,11 @@
+[Unit]
+Description=Run ansible-pull to apply environment configuration
+After=network.target
+ 
+[Service]
+User=ansible
+ExecStart=/usr/local/bin/ansible-config.sh
+Type=oneshot
+ 
+[Install]
+WantedBy=multi-user.target
