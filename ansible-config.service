@@ -1,10 +1,10 @@
 [Unit]
 Description=Run ansible-pull to apply environment configuration
-After=network.target
+After=network-online.target
  
 [Service]
 User=ansible
-ExecStart=/usr/local/bin/ansible-config.sh
+ExecStart=/home/ansible/auto_init/ansible-config.sh
 Type=oneshot
  
 [Install]
